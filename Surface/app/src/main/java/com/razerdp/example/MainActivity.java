@@ -3,11 +3,11 @@ package com.razerdp.example;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.razerdp.example.widget.VideoSurfaceView;
+import com.razerdp.example.widget.TestSurfaceView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private VideoSurfaceView videoSurface;
+    private TestSurfaceView videoSurface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,10 +17,5 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        videoSurface = findViewById(R.id.video_surface);
-
-        VideoInject videoInject = new VideoInject();
-        videoInject.injectSurfaceView(videoSurface);
-        videoInject.playVideo(R.raw.test);
     }
 }
